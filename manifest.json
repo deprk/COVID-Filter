@@ -1,0 +1,32 @@
+{
+    "name": "Coronavirus Extension",
+    "version": "1.0",
+    "description": "Block/Highlight Coronavirus",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["https://www.google.com/search*"],
+        "js": ["google-remover.js"]
+      },
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["youtube-remover.js"]
+      },
+      {
+        "matches": ["https://www.cnn.com/*"],
+        "js": ["cnn-remover.js"]
+      },
+      {
+        "matches": ["https://www.reddit.com/*"],
+        "js": ["reddit-remover.js"]
+      },
+      {
+        "matches": ["https://www.facebook.com/*"],
+        "js": ["facebook-remover.js"]
+    }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    }
+  }
